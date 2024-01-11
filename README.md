@@ -20,8 +20,6 @@ This library reads the ADC ports of the ADC081S ADC convertor.
 
 Feedback is as always welcome. 
 
-https://github.com/RobTillaart/MCP_ADC/issues/20
-
 
 #### Related
 
@@ -71,6 +69,8 @@ of the ADC first to get optimal speed.
 
 #### Should
 
+- add shutDown() + wakeUp()  // select between normal and shutdown mode.
+-
 
 #### Could
 
