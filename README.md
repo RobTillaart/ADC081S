@@ -35,17 +35,17 @@ Feedback is as always welcome.
 
 Texas instruments has 9 devices in this series including the ADC081S021.
 
-|  device name  |  bits  |  samples  |  compatibility  |
-|:--------------|:------:|:---------:|:---------------:|
-|  ADC081S021   |   8    |  200KSPS  |
-|  ADC081S051   |   8    |  500kSPS  |  to be verified
-|  ADC081S101   |   8    |  1 MSPS   |  to be verified
-|  ADC101S021   |   10   |  200KSPS  |  not supported yet  |
-|  ADC101S051   |   10   |  500kSPS  |  not supported yet  |
-|  ADC101S101   |   10   |  1 MSPS   |  not supported yet  |
-|  ADC121S021   |   12   |  200KSPS  |  not supported yet  |
-|  ADC121S051   |   12   |  500kSPS  |  not supported yet  |
-|  ADC121S101   |   12   |  1 MSPS   |  not supported yet  |
+|  device name  |  bits  |  KSPS  |  compatibility  |
+|:--------------|:------:|:------:|:---------------:|
+|  ADC081S021   |   8    |   200  |
+|  ADC081S051   |   8    |   500  |
+|  ADC081S101   |   8    |  1000  |
+|  ADC101S021   |   10   |   200  |  not supported yet  |
+|  ADC101S051   |   10   |   500  |  not supported yet  |
+|  ADC101S101   |   10   |  1000  |  not supported yet  |
+|  ADC121S021   |   12   |   200  |  not supported yet  |
+|  ADC121S051   |   12   |   500  |  not supported yet  |
+|  ADC121S101   |   12   |  1000  |  not supported yet  |
 
 
 #### Related
