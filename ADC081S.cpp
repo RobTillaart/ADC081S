@@ -1,7 +1,7 @@
 //
 //    FILE: ADC081S.cpp
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.0
+// VERSION: 0.1.1
 //    DATE: 2024-01-10
 // PURPOSE: Arduino library for ADC081S 8 bit ADC (SPI)
 //     URL: https://github.com/RobTillaart/ADC081S
@@ -26,12 +26,12 @@ ADC081S::ADC081S(__SPI_CLASS__ * mySPI)
 //       SOFTWARE SPI
 ADC081S::ADC081S(uint8_t dataIn, uint8_t clock)
 {
-  _dataIn   = dataIn;
-  _clock    = clock;
-  _select   = 255;
-  _hwSPI    = false;
-  _mySPI    = NULL;
-  _maxValue = 255;
+  _dataIn     = dataIn;
+  _clock      = clock;
+  _select     = 255;
+  _hwSPI      = false;
+  _mySPI      = NULL;
+  _maxValue   = 255;
   _isLowPower = false;
 }
 
