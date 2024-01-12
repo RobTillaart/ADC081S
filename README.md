@@ -31,6 +31,23 @@ The library is not tested with hardware yet.
 Feedback is as always welcome.
 
 
+#### Compatibles
+
+Texas instruments has 9 devices in this series including the ADC081S021.
+
+|  device name  |  bits  |  samples  |  compatibility  |
+|:--------------|:------:|:---------:|:---------------:|
+|  ADC081S021   |   8    |  200KSPS  |
+|  ADC081S051   |   8    |  500kSPS  |  to be verified
+|  ADC081S101   |   8    |  1 MSPS   |  to be verified
+|  ADC101S021   |   10   |  200KSPS  |  not supported yet  |
+|  ADC101S051   |   10   |  500kSPS  |  not supported yet  |
+|  ADC101S101   |   10   |  1 MSPS   |  not supported yet  |
+|  ADC121S021   |   12   |  200KSPS  |  not supported yet  |
+|  ADC121S051   |   12   |  500kSPS  |  not supported yet  |
+|  ADC121S101   |   12   |  1 MSPS   |  not supported yet  |
+
+
 #### Related
 
 - https://gammon.com.au/adc  tutorial about ADC's (UNO specific)
