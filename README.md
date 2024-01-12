@@ -18,7 +18,7 @@ Arduino library for ADC081S 8 bit ADC (SPI).
 
 This library reads the ADC ports of the ADC081S ADC convertor.
 
-Feedback is as always welcome. 
+Feedback is as always welcome.
 
 
 #### Related
@@ -44,16 +44,15 @@ Feedback is as always welcome.
 - **void begin(uint8_t select)** set select pin.
 - **int16_t maxValue()** returns maxReading of ADC, => 256
 
-
 #### Base
 
 - **uint16_t read()** reads the value of a single channel.
 - **void setSPIspeed(uint32_t speed)** sets SPI clock in **Hz**, please read datasheet
 of the ADC first to get optimal speed.
 - **uint32_t getSPIspeed()** gets current speed in **Hz**.
+- **void lowPower()** put device in low power mode.
 
-
-### Debug
+#### Debug
 
 - **bool usesHWSPI()** returns true if hardware SPI is used.
 - **uint32_t count()** returns number of reads since start.
@@ -69,8 +68,6 @@ of the ADC first to get optimal speed.
 
 #### Should
 
-- add shutDown() + wakeUp()  // select between normal and shutdown mode.
--
 
 #### Could
 

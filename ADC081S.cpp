@@ -98,6 +98,12 @@ bool ADC081S::usesHWSPI()
 }
 
 
+void ADC081S::lowPower()
+{
+  shutDown();
+}
+
+
 /////////////////////////////////////////////////////////////////////////////
 //
 //  PROTECTED
@@ -109,7 +115,7 @@ uint16_t ADC081S::readADC()
   uint16_t data = 0;
 
   digitalWrite(_select, LOW);
-  if (_hwSPI)
+  if (_hwSPI)  //  hardware SPI
   {
     _mySPI->beginTransaction(_spi_settings);
      data = _mySPI->transfer16(0);
@@ -125,15 +131,31 @@ uint16_t ADC081S::readADC()
 }
 
 
+void ADC081S::shutDown()
+{
+  digitalWrite(_select, LOW);
+  if (_hwSPI)  //  hardware SPI
+  {
+    _mySPI->beginTransaction(_spi_settings);
+    _mySPI->transfer(0);        //  8 pulses 
+    _mySPI->endTransaction();
+  }
+  else  //  Software SPI
+  {
+     swSPI_transfer16(0x0010);  //  4 pulses is enough
+  }
+  digitalWrite(_select, HIGH);
+}
+
 
 //  MSBFIRST
-uint16_t  ADC081S::swSPI_transfer16()
+uint16_t  ADC081S::swSPI_transfer16(uint16_t m)
 {
   uint8_t clk = _clock;
   uint8_t dai = _dataIn;
 
   uint16_t rv = 0;
-  for (uint16_t mask = 0x8000; mask; mask >>= 1)
+  for (uint16_t mask = m; mask; mask >>= 1)
   {
     digitalWrite(clk, LOW);
     digitalWrite(clk, HIGH);
