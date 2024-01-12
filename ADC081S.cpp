@@ -10,18 +10,16 @@
 #include "ADC081S.h"
 
 
-
-
-
 //       HARDWARE SPI
 ADC081S::ADC081S(__SPI_CLASS__ * mySPI)
 {
-  _dataIn   = 255;
-  _clock    = 255;
-  _select   = 255;
-  _hwSPI    = true;
-  _mySPI    = mySPI;
-  _maxValue = 255;
+  _dataIn     = 255;
+  _clock      = 255;
+  _select     = 255;
+  _hwSPI      = true;
+  _mySPI      = mySPI;
+  _maxValue   = 255;
+  _isLowPower = false;
 }
 
 
@@ -34,6 +32,7 @@ ADC081S::ADC081S(uint8_t dataIn, uint8_t clock)
   _hwSPI    = false;
   _mySPI    = NULL;
   _maxValue = 255;
+  _isLowPower = false;
 }
 
 
@@ -100,7 +99,21 @@ bool ADC081S::usesHWSPI()
 
 void ADC081S::lowPower()
 {
+  _isLowPower = true;
   shutDown();
+}
+
+
+void ADC081S::wakeUp()
+{
+  readADC();
+  _isLowPower = false;
+}
+
+
+bool ADC081S::isLowPower()
+{
+  return _isLowPower;
 }
 
 

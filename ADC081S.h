@@ -47,16 +47,18 @@ public:
   uint32_t count();  //  number of channels read.
 
   void     lowPower();
+  void     wakeUp();
+  bool     isLowPower();
 
 protected:
   uint8_t  _dataIn;
   uint8_t  _clock;
   uint8_t  _select;
-
   bool     _hwSPI;
+
   uint16_t _maxValue;
   uint16_t readADC();
-  void     shutDownMode();
+  void     shutDown();
 
   uint16_t swSPI_transfer16(uint16_t m = 0x8000);
 
@@ -66,6 +68,7 @@ protected:
   SPISettings     _spi_settings;
 
   uint32_t _count;
+  bool     _isLowPower;
 };
 
 
