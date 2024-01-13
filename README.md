@@ -11,7 +11,7 @@
 
 # ADC081S
 
-Arduino library for ADC081S 8 bit ADC (SPI) single channel.
+Arduino library for ADC081S 8 bit, ADC101S 10 bit and ADC121S 12 bit ADC (SPI) single channel.
 
 
 ## Description
