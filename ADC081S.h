@@ -31,12 +31,12 @@ public:
   //       HARDWARE SPI
   ADC081S(__SPI_CLASS__ * mySPI = &SPI);
   //       SOFTWARE SPI
-  ADC081S(uint8_t data, uint8_t clock);
+  ADC081S(uint8_t dataIn, uint8_t clock);
 
   void     begin(uint8_t select);
 
-  uint16_t  maxValue();
-  uint16_t  read();
+  uint16_t maxValue();
+  uint16_t read();
 
   //       speed in Hz
   void     setSPIspeed(uint32_t speed);

@@ -24,7 +24,7 @@ ADC081S::ADC081S(__SPI_CLASS__ * mySPI)
 
 
 //       SOFTWARE SPI
-ADC081S::ADC081S(uint8_t data, uint8_t clock)
+ADC081S::ADC081S(uint8_t dataIn, uint8_t clock)
 {
   _data       = dataIn;
   _clock      = clock;
